@@ -54,7 +54,7 @@ predictions = model.predict(X_test)
 # model.predict() -> model predicts 
 
 print("Predictions:")
-print(predictions[:100])
+print(predictions[:10])
 
 
 print("Accuracy:", accuracy_score(y_test, predictions))
