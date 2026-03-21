@@ -25,7 +25,7 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 print("Predictions:")
-print(predictions[:10])
+print(predictions[:100])
 
 
 print("Accuracy:", accuracy_score(y_test, predictions))

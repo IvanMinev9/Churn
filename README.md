@@ -17,24 +17,6 @@ import pandas as pd
 
 df = pd.read_csv("Churn_Modelling.csv")
 
-Explanation:
-Pandas is a library for data analysis read_csv() loads the dataset and df is a DataFrame (a table containing all the data)
-
-Data Preparation
-
-X = df[["Age", "Balance", "NumOfProducts"]]
-y = df["Exited"]
-
-Explanation:
-X (features) - input data (customer characteristics)
-y (target) - output (whether the customer leaves)
-
-Selected features:
-
-Age - customer age
-Balance - account balance
-NumOfProducts - number of products
-
 Exploratory Data Analysis (EDA)
 
 print(df["Exited"].value_counts())
@@ -76,6 +58,23 @@ Next steps modeling approach
 After the analysis, a Logistic Regression model can be used by selecting key features such as age, balance, and number of products. The data is could be split into training and testing sets, and the model could be trained to predict the probability of customer churn.
 
 Train/Test Split - Regression model
+
+Explanation:
+Pandas is a library for data analysis read_csv() loads the dataset and df is a DataFrame (a table containing all the data)
+
+Data Preparation
+X = df[["Age", "Balance", "NumOfProducts"]]
+y = df["Exited"]
+
+Explanation:
+X (features) - input data (customer characteristics)
+y (target) - output (whether the customer leaves)
+
+Selected features:
+
+Age - customer age
+Balance - account balance
+NumOfProducts - number of products
 
 from sklearn.model_selection import train_test_split
 
