@@ -13,6 +13,7 @@ print(df["Exited"].value_counts()) # -> x times that we encounter the given valu
 print("\nAverage age:")
 print(df.groupby("Exited")["Age"].mean())
 # groupby() -> compare clients those who churn and the rest. 
+# mean() -> finds the average value 
 
 # Custommers balance
 
@@ -51,7 +52,9 @@ model.fit(X_train, y_train)
 
 # Predictions
 predictions = model.predict(X_test)
-# model.predict() -> model predicts 
+# model.predict() -> we want to see how to model whould predict data unseen until now,
+# meaning we want the model to predict. y_test the right data do not feed the model with that. 
+
 
 print("Predictions:")
 print(predictions[:10])
@@ -61,3 +64,4 @@ print("Accuracy:", accuracy_score(y_test, predictions))
 # % count how much of the predicted data is accured. 
 print("Actual values:")
 print(y_test[:10].values)
+# If we want to compare the real data with the one that model predicted. 
